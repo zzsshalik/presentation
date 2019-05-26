@@ -1,0 +1,178 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>reveal.js</title>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/black.css">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/monokai.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <h2>CSS Grid Layout</h2>
+                <img src="img/start.png" alt="start" style="width:50%; border:none;">
+            </section>
+
+            <section>
+                <p><b>Can I use?</b></p>
+                <img src="img/canIUse.jpg" alt="CanIUse">
+            </section>
+
+            <section data-background="img/grid-vs-flexbox.jpg" data-background-repeat="none" data-background-size="50%" style="">
+                <H2>Grid vs Flexbox</H2>
+            </section>
+
+            <section>
+                <h2>main definitions</h2>
+                <img data-src="img/grid-structure.jpg" style="width:70%;">
+            </section>
+            <section>
+                <section>
+                    <h5>display: grid</h5>
+                    <pre><p>Html</p><code class="hljs" data-trim data-line-numbers="1-11">
+						&lt;div class="wrapper"&gt;
+						    &lt;div&gt;One&lt;/div&gt;
+						    &lt;div&gt;Two&lt;/div&gt;
+						    &lt;div&gt;Three&lt;/div&gt;
+						    &lt;div&gt;Four&lt;/div&gt;
+						    &lt;div&gt;Five&lt;/div&gt;
+						&lt;/div&gt;
+					</code></pre>
+                    <pre><p>CSS</p><code class="hljs" data-trim data-line-numbers="1-11">
+								.wrapper {
+									display: grid;
+								  }
+						</code></pre>
+                    <img src="img/1.jpg" alt="1" style="border:none; width:50%">
+                </section>
+
+                <section>
+                    <h5>Grid Tracks</h5>
+                    <pre><p>Html</p><code class="hljs" data-trim data-line-numbers="1-11">
+								&lt;div class="wrapper"&gt;
+								    &lt;div&gt;One&lt;/div&gt;
+								    &lt;div&gt;Two&lt;/div&gt;
+								    &lt;div&gt;Three&lt;/div&gt;
+								    &lt;div&gt;Four&lt;/div&gt;
+								    &lt;div&gt;Five&lt;/div&gt;
+								&lt;/div&gt;
+							</code></pre>
+                    <pre><p>CSS</p><code class="hljs" data-trim data-line-numbers="1-11">
+									.wrapper {
+										display: grid;
+										grid-template-columns: 200px 200px 200px;
+									  }
+								</code></pre>
+                    <img src="img/2.jpg" alt="2" style="border:none; width:50%">
+                </section>
+                <section>
+                    <h5>fr and auto</h5>
+                    <pre><p>Html</p><code class="hljs" data-trim data-line-numbers="1-11">
+									&lt;div class="wrapper"&gt;
+									    &lt;div&gt;One&lt;/div&gt;
+									    &lt;div&gt;Two&lt;/div&gt;
+									    &lt;div&gt;Three&lt;/div&gt;
+									    &lt;div&gt;Four&lt;/div&gt;
+									    &lt;div&gt;Five&lt;/div&gt;
+									&lt;/div&gt;
+								</code></pre>
+                    <pre><p>CSS</p><code class="hljs" data-trim data-line-numbers="1-11">
+							.wrapper {
+								display: grid;
+								grid-template-columns: 10% 2fr auto;
+							  }
+									</code></pre>
+                    <img src="img/3.jpg" alt="3" style="border:none; width:50%">
+                </section>
+                <section>
+                    <h5>Grid-template-areas</h5>
+                    <pre><p>CSS</p><code class="hljs" data-trim data-line-numbers="1-11">
+								.container {
+									grid-template-columns: 50px 50px 50px 50px;
+									grid-template-rows: auto;
+									grid-template-areas: 
+									  "header header header header"
+									  "main main . sidebar"
+									  "footer footer footer footer";
+								  }
+										</code></pre>
+                    <img src="img/4.jpg" alt="4" style="border:none; width:35%">
+                </section>
+
+                <section>
+                    <pre><p>Html</p><code class="hljs" data-trim data-line-numbers="1-11">
+								&lt;div class="wrapper"&gt;
+								    &lt;div class="box box1"&gt;
+								        &lt;div class="nested"&gt;a&lt;/div&gt;
+								        &lt;div class="nested"&gt;b&lt;/div&gt;
+								        &lt;div class="nested"&gt;c&lt;/div&gt;
+								    &lt;/div&gt;
+								    &lt;div class="box box2"&gt;Two&lt;/div&gt;
+								    &lt;div class="box box3"&gt;Three&lt;/div&gt;
+								    &lt;div class="box box4"&gt;Four&lt;/div&gt;
+								    &lt;div class="box box5"&gt;Five&lt;/div&gt;
+								&lt;/div&gt;
+									</code></pre>
+                    <img src="img/5.jpg" alt="5" style="border:none; width:45%">
+                </section>
+            </section>
+
+            <section>
+                <section>
+                    <h6>At the End</h6>
+                    <img src="img/1.png" alt="1_png" style="border:none; width:100%">
+                </section>
+                <section>
+                    <h6>At the End</h6>
+                    <img src="img/example1.jpg" alt="1_png" style="border:none; width:100%">
+                </section>
+
+            </section>
+            <section>
+                <h2>THANK YOU FOR YOUR ATTENTION</h2>
+            </section>
+        </div>
+    </div>
+
+    <script src="js/reveal.js"></script>
+
+    <script>
+        // More info about config & dependencies:
+        // - https://github.com/hakimel/reveal.js#configuration
+        // - https://github.com/hakimel/reveal.js#dependencies
+        Reveal.initialize({
+            dependencies: [{
+                src: 'plugin/markdown/marked.js'
+            }, {
+                src: 'plugin/markdown/markdown.js'
+            }, {
+                src: 'plugin/notes/notes.js',
+                async: true
+            }, {
+                src: 'plugin/highlight/highlight.js',
+                async: true
+            }]
+        });
+    </script>
+</body>
+
+</html>
