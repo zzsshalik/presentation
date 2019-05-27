@@ -4,6 +4,7 @@
  * MIT licensed
  *
  * Copyright (C) 2019 Hakim El Hattab, http://hakim.se
+ * это мой коммит 6 августа
  */
 (function( root, factory ) {
 	if( typeof define === 'function' && define.amd ) {
